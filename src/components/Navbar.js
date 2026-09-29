@@ -35,9 +35,6 @@ export default function Navbar(props) {
             </li>
           </ul>
 
-
-    
-
           {/* -------------------------DARK MODE BUTTTON------------------------------ */}
 
           <div
