@@ -38,17 +38,17 @@ export default function Navbar(props) {
           {/* -------------------------DARK MODE BUTTTON------------------------------ */}
 
           <div
-            class={`form-check form-switch text-${props.mode === "light" ? "dark" : "light"}`}
+            className={`form-check form-switch text-${props.mode === "light" ? "dark" : "light"}`}
           >
             <input
-              class="form-check-input"
+              className="form-check-input"
               onClick={props.toggleMode}
               type="checkbox"
               role="switch"
               id="switchCheckDefault"
             />
             <label
-              class="form-check-label mode={mode} toggleMode={toggleMode}"
+              className="form-check-label"
               htmlFor="switchCheckDefault"
             >
               Enable Darkmode
@@ -59,12 +59,15 @@ export default function Navbar(props) {
     </nav>
   );
 }
-Navbar.propType = {
+Navbar.propTypes = {
   title: PropTypes.string.isRequired,
   aboutText: PropTypes.string.isRequired,
+  mode: PropTypes.oneOf(["light", "dark"]),
+  toggleMode: PropTypes.func,
 };
 
-Navbar.defaultprop = {
+Navbar.defaultProps = {
   title: "Set title here",
   aboutText: "About ",
+  mode: "light",
 };
