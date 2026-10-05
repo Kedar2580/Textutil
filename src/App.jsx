@@ -15,9 +15,9 @@ function App() {
       type: type,
     });
     setTimeout(() => {
-      setAlert("")
+      setAlert("");
     }, 1000);
-  }
+  };
 
   const toggleMode = () => {
     if (mode === "light") {
@@ -44,12 +44,11 @@ function App() {
       <div className="container  my-3">
         <TextForm
           showAlert={showAlert}
-          heading="Enter the text to analyze below"
+          heading="TextUtils - Word Counter, Text Counter"
           mode={mode}
         />
-      {/* <About /> */}
+        {/* <About /> */}
       </div>
-
 
       {/* <Navbar/> */}
     </>
